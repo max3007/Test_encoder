@@ -14,3 +14,15 @@ giri/min (impostando `IMPULSI_GIRO`).
 `sh test/esegui_test.sh` compila lo sketch con g++ usando finte API Arduino
 (`test/mock/`) e simula segnali in quadratura, comprese pause, bassa velocità
 e latenza degli interrupt. Non sostituisce la prova sulla scheda.
+
+## Build con PlatformIO
+```sh
+pio run                 # compila (env esp32dev)
+pio run -t upload       # carica sulla scheda
+pio device monitor      # Monitor seriale a 115200 baud
+```
+`platformio.ini` compila `pio/main.cpp`, che include `TesterEncoder/TesterEncoder.ino`:
+lo sketch resta unico e apribile anche con Arduino IDE. Il wrapper serve perche' il
+convertitore `.ino` di PlatformIO si confonde con la pagina HTML nella raw string.
+Nel wrapper manca la generazione automatica dei prototipi: nello sketch ogni funzione
+va definita prima di essere usata.

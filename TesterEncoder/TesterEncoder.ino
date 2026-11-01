@@ -24,6 +24,7 @@
       massima misurabile e' circa 15 V.
 */
 
+#include <Arduino.h>
 #include <WiFi.h>
 #include <WebServer.h>
 #include "soc/gpio_reg.h"
