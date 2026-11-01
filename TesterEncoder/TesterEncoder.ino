@@ -12,6 +12,9 @@
     1. Alimenta l'ESP32 dalla USB-C.
     2. Sul telefono collegati alla rete Wi-Fi "TesterEncoder" (password 12345678).
     3. Apri il browser all'indirizzo http://192.168.4.1
+       Android 17+: il browser deve avere il permesso di accesso alla rete locale
+       (Impostazioni > App > Chrome > Autorizzazioni), altrimenti Chrome da'
+       ERR_TOO_MANY_RETRIES.
   Le stesse misure escono anche sul Monitor seriale (115200 baud).
 
   Nessuna libreria esterna: servono solo le schede "esp32" di Espressif

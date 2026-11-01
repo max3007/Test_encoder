@@ -5,6 +5,10 @@ e mostra le misure su una pagina web (Wi-Fi "TesterEncoder", http://192.168.4.1)
 e sul Monitor seriale. Collegamenti e uso sono descritti in testa a
 `TesterEncoder/TesterEncoder.ino`.
 
+Su Android 17 o successivo il browser deve avere il permesso di accesso alla rete
+locale (Impostazioni > App > Chrome > Autorizzazioni). Senza, Chrome non apre la
+pagina e mostra `ERR_TOO_MANY_RETRIES`, anche se la rete Wi-Fi e' collegata.
+
 ## Misure
 Tensione di alimentazione, livelli A/B, impulsi, frequenza, duty, sfasamento A-B,
 errori di quadratura, posizione, senso di rotazione, velocità (passi/s) e
